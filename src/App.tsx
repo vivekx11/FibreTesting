@@ -1,3 +1,5 @@
+// app.tsx
+
 import React, { useState, useEffect, useRef } from 'react';
 import { ThemeProvider } from './components/ThemeContext';
 import { Navbar } from './components/Navbar';
