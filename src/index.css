@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
+  
+  --color-bg: var(--bg-color);
+  --color-surface: var(--surface-color);
+  --color-text-primary: var(--text-color-primary);
+  --color-text-secondary: var(--text-color-secondary);
+  --color-border-custom: var(--border-color);
+  --color-accent: var(--accent-color);
+}
+
+:root {
+  --bg-color: #F7F3EE;
+  --surface-color: #FFFFFF;
+  --text-color-primary: #1A1A1A;
+  --text-color-secondary: #525252;
+  --border-color: #EAEAEA;
+  --accent-color: #D4A27F;
+}
+
+:root.dark {
+  --bg-color: #0B0B0B;
+  --surface-color: #111111;
+  --text-color-primary: #FFFFFF;
+  --text-color-secondary: #9E9E9E;
+  --border-color: #222222;
+  --accent-color: #D4A27F;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color-primary);
+  font-family: 'Geist', 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom linear gradient highlights */
+.gradient-text {
+  background: linear-gradient(135deg, var(--text-color-primary) 30%, var(--accent-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, #EAD5C3 0%, var(--accent-color) 100%);
+}
+
+.dark .gradient-accent {
+  background: linear-gradient(135deg, var(--accent-color) 0%, #8A5A36 100%);
+}
